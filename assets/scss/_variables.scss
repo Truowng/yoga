@@ -1,0 +1,60 @@
+// START COLOR
+$white: #fff;
+$white-2: #f6f6f6;
+$black: #000;
+$dark-violet: #914c97;
+$light-violet: #dbbfdd;
+$light-violet-2: #edd7ef;
+$light-violet-3: #f4e9f5;
+$gray: #666666;
+
+// START DIMENSION
+$border-radius-sm: 20px;
+$border-radius-md: 30px;
+
+// START CSS
+@mixin flex($direction, $justify, $align, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// START BREAKPOINT VARIABLES
+@mixin extra-desktop {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES

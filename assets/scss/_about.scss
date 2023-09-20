@@ -1,0 +1,441 @@
+/* ABOUT
+========================================= */
+
+// START BANNER
+#about-banner {
+  margin-top: 200px;
+  position: relative;
+
+  &::after {
+    content: url(../images/element/wave.png);
+    position: absolute;
+    bottom: -65%;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: auto;
+
+    transform: scaleX(-1);
+  }
+  .heading-block {
+    margin-top: 96px;
+    @include tablet {
+      margin-top: 0;
+    }
+    .badge {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: $black;
+      padding: 0;
+    }
+    .title {
+      font-size: 90px;
+      font-weight: 500;
+      margin-bottom: 28px;
+      color: $dark-violet;
+      @include large-desktop {
+        font-size: 80px;
+      }
+      @include desktop {
+        font-size: 65px;
+      }
+    }
+    .desc {
+      width: 95%;
+    }
+  }
+  .banner-image {
+    @include flex(row, center, center, unset);
+    img {
+      width: 90%;
+    }
+  }
+}
+// END BANNER
+
+// START ADVANTAGE
+#about-advantage {
+  margin-top: 100px;
+  .heading-block {
+    margin-bottom: 80px;
+    .title,
+    .desc {
+      text-align: center;
+    }
+  }
+  .swiper-slide {
+    height: unset;
+  }
+  .advantage-item {
+    padding: 50px 25px;
+    border-radius: $border-radius-md;
+    background-color: $light-violet-2;
+    height: 100%;
+    cursor: pointer;
+    @include flex(column, start, center, 65px);
+    @include tablet {
+      margin: 0 10px;
+    }
+
+    &:hover {
+      .advantage-item-icon {
+        path {
+          stroke: $white;
+          fill: $white;
+        }
+      }
+    }
+
+    &-icon {
+      width: 67px;
+      height: 67px;
+      svg {
+        width: 100%;
+        path {
+          transition: all ease 0.5s;
+        }
+      }
+    }
+    &-content {
+      .title {
+        margin-bottom: 15px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .desc {
+        font-size: 14px;
+        font-weight: 300;
+        color: $black;
+        text-align: center;
+        letter-spacing: -0.005em;
+      }
+    }
+  }
+}
+// END ADVANTAGE
+
+// START BREAK
+#about-break {
+  position: relative;
+  margin-top: 200px;
+  @include tablet {
+    margin-top: 150px;
+  }
+  .container {
+    @include flex(row, end, unset, unset);
+  }
+  .break-image {
+    width: 100%;
+    @include landscape-phone {
+      height: 500px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .heading-block {
+    max-width: 500px;
+    position: absolute;
+    bottom: 30%;
+    z-index: 1;
+    .title,
+    .desc {
+      color: $white;
+    }
+
+    .title {
+      font-size: 80px;
+      text-align: center;
+      @include desktop {
+        font-size: 60px;
+      }
+      @include landscape-phone {
+        font-size: 45px;
+      }
+    }
+    .desc {
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 200;
+    }
+  }
+}
+// END BREAK
+
+// START COURSES
+#about-courses {
+  margin-top: 150px;
+  @include landscape-phone {
+    margin-top: 100px;
+  }
+  .heading-block {
+    margin-bottom: 80px;
+    .title,
+    .desc {
+      text-align: center;
+    }
+  }
+  .courses-list {
+    position: relative;
+    .courses-item {
+      position: relative;
+      background-color: $white;
+      padding: 20px;
+      margin-top: 100px;
+      border-radius: $border-radius-md;
+      transition: all ease 1s;
+      cursor: pointer;
+      @include flex(column, unset, start, 35px);
+
+      &:hover {
+        background-color: $light-violet-3;
+      }
+      &-lesson {
+        font-size: 14px;
+        line-height: 21px;
+        color: $white;
+        background-color: $dark-violet;
+        border-radius: $border-radius-sm;
+        padding: 8px 20px;
+        min-width: 100px;
+        text-align: center;
+        letter-spacing: 0;
+        font-weight: 200;
+      }
+      &-teacher {
+        width: 200px;
+        height: 200px;
+        border-radius: 300px;
+        border: 5px solid $white-2;
+        overflow: hidden;
+        position: absolute;
+        top: -100px;
+        right: 24px;
+        z-index: 1;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-rating {
+        width: 100px;
+        img {
+          width: 100%;
+        }
+      }
+      &-content {
+        width: 100%;
+        @include flex(column, start, unset, 20px);
+        &-text {
+          .title {
+            font-size: 22px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 33px;
+            margin-bottom: 5px;
+            transition: all ease 0.5s;
+            display: inline-block;
+            &:hover {
+              color: $dark-violet;
+            }
+            @include mobile {
+              font-size: 20px;
+            }
+          }
+          .desc {
+            color: $gray;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 22px;
+            letter-spacing: -0.36px;
+          }
+        }
+        &-price {
+          @include flex(row, space-between, center, unset);
+          border-radius: $border-radius-sm;
+          background-color: #fafafa;
+          padding: 16px 20px;
+          width: 100%;
+          .current-price {
+            color: $dark-violet;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: -0.6px;
+          }
+          .old-price {
+            color: #a7a7a7;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: -0.45px;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+    .courses-button-next,
+    .courses-button-prev {
+      position: absolute;
+      top: 45%;
+      z-index: 1;
+      background-color: $white;
+      border-radius: 300px;
+      width: 35px;
+      height: 35px;
+      transition: all ease 0.5s;
+      outline: none;
+      border: none;
+      @include flex(row, center, center, unset);
+      @include large-desktop {
+        display: none;
+      }
+      path {
+        transition: all ease 0.5s;
+      }
+
+      &:hover {
+        background-color: $dark-violet;
+        path {
+          stroke: $white;
+        }
+      }
+    }
+
+    .courses-button-next {
+      right: -80px;
+    }
+    .courses-button-prev {
+      left: -80px;
+    }
+    .button {
+      margin: 50px auto 0;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
+}
+// END COURSES
+
+// START FORM
+#about-form {
+  margin-top: 222px;
+  @include tablet {
+    margin-top: 150px;
+  }
+  @include landscape-phone {
+    margin-top: 100px;
+  }
+  .form-wrapper {
+    position: relative;
+    height: 525px;
+    border-radius: $border-radius-md;
+    background-color: $light-violet-2;
+    padding-right: 130px;
+    @include desktop {
+      padding-right: 70px;
+    }
+    @include tablet {
+      padding-right: 0;
+    }
+
+    @include landscape-phone {
+      height: 400px;
+    }
+
+    .form-image {
+      height: 670px;
+      width: auto;
+      position: absolute;
+      bottom: 0;
+      left: calc((100% - 1320px) / 2 + 200px);
+      @include desktop {
+        left: calc((100% - 1320px) / 2 + 250px);
+      }
+      @include tablet {
+        display: none;
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .form-content {
+      max-width: 420px;
+      height: 100%;
+      margin-left: auto;
+      @include flex(column, center, start, 50px);
+      @include tablet {
+        margin: 0 auto;
+      }
+      @include landscape-phone {
+        padding: 20px 15px;
+        gap: 35px;
+      }
+      .heading-block {
+        .title {
+          font-size: 80px;
+          font-weight: 500;
+          line-height: 100%;
+          @include landscape-phone {
+            font-size: 50px;
+          }
+          @include mobile {
+            font-size: 30px;
+          }
+        }
+        .desc {
+          color: $black;
+        }
+      }
+      input {
+        border-radius: 10px;
+        border: 1px solid #d0d0d0;
+        background: #f6f6f6;
+        padding: 15px 20px;
+        outline: none;
+        transition: all ease 0.5s;
+        font-size: 14px;
+        margin-right: 15px;
+        flex: 1;
+        &::placeholder {
+          color: #bbb;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: -0.42px;
+        }
+        &:focus {
+          border-color: $dark-violet;
+        }
+        @include mobile {
+          margin-right: 0;
+        }
+      }
+      .form-button {
+        background-color: $dark-violet;
+        color: $white;
+        border-radius: 10px;
+        padding: 15px;
+        min-width: 120px;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        font-weight: 300;
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// END FORM
