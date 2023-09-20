@@ -1628,9 +1628,13 @@ input::-webkit-inner-spin-button {
   border: none;
   font-size: 14px;
   font-weight: 300;
+  transition: all ease 0.5s;
 }
 @media only screen and (max-width: 575px) {
   #about-form .form-wrapper .form-content .form-button {
     width: 100%;
   }
+}
+#about-form .form-wrapper .form-content .form-button:hover {
+  background-color: #c397c7;
 }

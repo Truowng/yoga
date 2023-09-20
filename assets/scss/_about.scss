@@ -431,8 +431,12 @@
         border: none;
         font-size: 14px;
         font-weight: 300;
+        transition: all ease 0.5s;
         @include mobile {
           width: 100%;
+        }
+        &:hover {
+          background-color: $dark-violet-2;
         }
       }
     }
