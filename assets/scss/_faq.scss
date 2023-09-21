@@ -1,0 +1,116 @@
+// START BANNER
+#faq-banner {
+  background-image: url(../images/banner/faq.png);
+}
+// END BANNER
+
+// START FAQ
+#faq {
+  margin-top: 100px;
+  .faq-list {
+    .faq-item {
+      padding: 40px;
+      border-radius: $border-radius-md;
+      border: 1px solid #d0d0d0;
+      margin-bottom: 30px;
+      &-heading {
+        @include flex(row, space-between, center, unset);
+        cursor: pointer;
+        margin-bottom: 30px;
+        transition: all ease 0.5s;
+        &[aria-expanded="false"] {
+          margin-bottom: 0;
+        }
+        &[aria-expanded="true"] {
+          .faq-item-heading-title {
+            color: $dark-violet;
+          }
+          .faq-item-heading-icon {
+            svg {
+              transform: rotate(180deg);
+              path {
+                stroke: $dark-violet;
+              }
+            }
+          }
+        }
+        &-title {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.48px;
+          margin-bottom: 0;
+          width: 80%;
+          transition: all ease 0.5s;
+          line-height: 24px;
+        }
+        &-icon {
+          width: 20px;
+          svg {
+            width: 100%;
+            transition: all ease 0.5s;
+            path {
+              transition: all ease 0.5s;
+            }
+          }
+        }
+      }
+      &-content {
+        color: $gray;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 27px;
+        letter-spacing: -0.42px;
+      }
+    }
+  }
+}
+// END FAQ
+
+// START SUPPORT
+#faq-support {
+  margin-top: 100px;
+  @include landscape-phone {
+    margin-top: 50px;
+  }
+  .support-wrapper {
+    height: 321px;
+    border-radius: $border-radius-md;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../images/banner/faq-support.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(column, center, center, unset);
+
+    .support-title {
+      color: $white;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: -1.2px;
+      margin-bottom: 24px;
+      width: fit-content;
+      @include landscape-phone {
+        font-size: 30px;
+      }
+    }
+    .support-text {
+      color: $white;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.42px;
+      width: fit-content;
+    }
+    .support-number {
+      color: $white;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.9px;
+      width: fit-content;
+    }
+  }
+}
+// END SUPPORT

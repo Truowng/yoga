@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Liên hệ</title>
+  </head>
+  <body>
+    <!-- START HEADER -->
+    <div id="header">
+      <div class="pc-header">
+        <div class="container">
+          <div class="header-container">
+            <div class="header-menu">
+              <div class="header-menu-item">
+                <a href="#"> Giới thiệu </a>
+              </div>
+              <div class="header-menu-item">
+                <a href="#"> Giáo trình </a>
+              </div>
+              <div class="header-menu-item">
+                <a href="#"> Khóa học </a>
+              </div>
+            </div>
+            <div class="header-logo font-title">
+              <a href="#">Yoga</a>
+            </div>
+            <div class="header-menu">
+              <div class="header-menu-item">
+                <a href="#"> Thư viện </a>
+              </div>
+              <div class="header-menu-item">
+                <a href="#"> Liên hệ </a>
+              </div>
+              <div class="header-menu-item">
+                <a href="#"> Tư vấn </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-header">
+        <div class="header-logo font-title">
+          <a href="#">Yoga</a>
+        </div>
+        <div class="mobile-header-button">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="mobile-header-modal">
+          <div class="mobile-header-button">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="header-menu">
+            <div class="header-menu-item">
+              <a href="#"> Giới thiệu </a>
+            </div>
+            <div class="header-menu-item">
+              <a href="#"> Giáo trình </a>
+            </div>
+            <div class="header-menu-item">
+              <a href="#"> Khóa học </a>
+            </div>
+            <div class="header-menu-item">
+              <a href="#"> Thư viện </a>
+            </div>
+            <div class="header-menu-item">
+              <a href="#"> Liên hệ </a>
+            </div>
+            <div class="header-menu-item">
+              <a href="#"> Tư vấn </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- START FORM -->
+    <section id="contact-form">
+      <div class="container">
+        <div class="heading-block">
+          <h1 class="title">Liên hệ</h1>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur. Auctor varius morbi laoreet
+            ullamcorper malesuada blandit
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-12 mb-5 mb-md-0 mb-lg-0">
+            <form class="form-wrapper">
+              <div class="form-input">
+                <input type="text" placeholder="Họ & tên*" />
+                <input type="text" placeholder="Số điện thoại*" />
+              </div>
+              <div class="form-input">
+                <input type="text" placeholder="Email*" />
+                <select name="courses" id="courses">
+                  <option
+                    value="Khóa học bạn quan tâm"
+                    hidden
+                    selected
+                    disabled
+                  >
+                    Khóa học bạn quan tâm
+                  </option>
+                  <option value="Yoga cá nhân hóa">Yoga cá nhân hóa</option>
+                  <option value="Yoga cơ bản">Yoga cơ bản</option>
+                  <option value="Yoga nâng cao">Yoga nâng cao</option>
+                </select>
+              </div>
+              <textarea placeholder="Lời nhắn" cols="30" rows="10"></textarea>
+              <button class="form-button" type="submit">đăng kí học</button>
+            </form>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <ul class="contact-info">
+              <li class="contact-info-item">
+                <h2 class="contact-info-item-title">Hotline</h2>
+                <a
+                  href="tel:0963 636 363"
+                  title="0963 636 363"
+                  class="contact-info-item-content"
+                >
+                  0963 636 363
+                </a>
+              </li>
+              <li class="contact-info-item">
+                <h2 class="contact-info-item-title">Email</h2>
+                <a
+                  href="mailto:support@yogastudio.com"
+                  title="support@yogastudio.com"
+                  class="contact-info-item-content"
+                >
+                  support@yogastudio.com
+                </a>
+              </li>
+              <li class="contact-info-item">
+                <h2 class="contact-info-item-title">Địa chỉ</h2>
+                <p class="contact-info-item-content">
+                  2/25 Thọ Tháp, Dịch Vọng, Cầu Giấy, <br />
+                  Hà Nội
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END FORM -->
+
+    <!-- START MAP -->
+    <section id="contact-map">
+      <div class="container">
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.019381476074!2d105.78850337588787!3d21.031910487669116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ade7a42a41c7%3A0xd0905b6cacd304da!2zQ8O0bmcgdHkgVE5ISCBk4buLY2ggduG7pSB0cnV54buBbiB0aMO0bmcgRkhNIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1695287145316!5m2!1svi!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- END MAP -->
+
+    <!-- START FOOTER -->
+    <div id="footer" class="section">
+      <div class="footer-shape">
+        <img src="./assets/images/element/footer-wave.svg" alt="footer-shape" />
+      </div>
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-4 col-12">
+              <div class="footer-logo">
+                <a href="#" class="font-title logo"> Yoga </a>
+                <div class="footer-logo-social">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-12">
+              <div class="footer-link">
+                <h3>Liên kết</h3>
+                <div class="footer-link-list">
+                  <a href="#">Giới thiệu</a>
+                  <a href="#">Giáo trình</a>
+                  <a href="#">Khóa học</a>
+                  <a href="#">Tư vấn</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="footer-link">
+                <h3>Thông tin khác</h3>
+                <div class="footer-link-list">
+                  <p>Địa chỉ: 2/25 Thọ Tháp, Dịch Vọng, Cầu Giấy, Hà Nội</p>
+                  <p>Điện thoại: 0123.456.789</p>
+                  <p>Email: fhmvietnam@yoga.com</p>
+                  <p>Giờ học: Thứ 2 - Thứ 6 | 6:00 - 17:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

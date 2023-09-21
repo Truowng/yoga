@@ -1,0 +1,127 @@
+// START FORM
+#contact-form {
+  margin-top: 200px;
+  @include tablet {
+    margin-top: 150px;
+  }
+  .heading-block {
+    margin-bottom: 30px;
+    .title {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: -0.9px;
+    }
+    .desc {
+      max-width: 400px;
+    }
+  }
+  .form-wrapper {
+    .form-input {
+      @include flex(row, space-between, center, 15px);
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      input,
+      select {
+        flex: 1;
+        outline: none;
+        border: 1px solid #d0d0d0;
+        border-radius: 10px;
+        height: 44px;
+        padding: 0 14px;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.42px;
+        background-color: transparent;
+        color: $black;
+        &::placeholder {
+          color: $gray;
+        }
+      }
+    }
+    textarea {
+      outline: none;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: -0.42px;
+      background-color: transparent;
+      resize: none;
+      width: 100%;
+      padding: 14px;
+
+      &::placeholder {
+        color: $gray;
+      }
+    }
+    .form-button {
+      margin-top: 30px;
+      color: $white;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      background-color: #a06aa5;
+      padding: 15px;
+      width: 100%;
+      transition: all ease 0.5s;
+      &:hover {
+        background-color: $dark-violet-2;
+      }
+    }
+  }
+  .contact-info {
+    width: fit-content;
+    margin: 0 auto;
+    @include landscape-phone {
+      width: 100%;
+    }
+    &-item {
+      margin-bottom: 30px;
+      &-title {
+        color: $black;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 5px;
+      }
+      &-content {
+        color: $black;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.42px;
+      }
+    }
+  }
+}
+// END FORM
+
+// START MAP
+#contact-map {
+  margin-top: 150px;
+  @include tablet {
+    margin-top: 100px;
+  }
+  @include landscape-phone {
+    margin-top: 50px;
+  }
+  .map-wrapper {
+    height: 600px;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba($color: #000000, $alpha: 0.05);
+    @include landscape-phone {
+      height: 400px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+// END MAP
