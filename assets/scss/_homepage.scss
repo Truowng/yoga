@@ -95,6 +95,7 @@
   font-weight: 300;
   color: $gray;
   letter-spacing: -0.03em;
+  line-height: 32px;
   @include tablet {
     font-size: 14px;
   }
@@ -156,6 +157,7 @@
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: 400;
+  letter-spacing: -0.03em;
   @include landscape-phone {
     font-size: 16px;
   }
@@ -167,10 +169,6 @@
   color: $gray;
   letter-spacing: -0.03em;
   line-height: 27px;
-
-  // @include landscape-phone {
-  //   font-size: 16px;
-  // }
 }
 
 #home-advantage .advantage-img,
@@ -374,12 +372,12 @@
   max-width: 80%;
   width: 100%;
   font-weight: 300;
-  line-height: 27px;
-  font-size: 14px;
+  line-height: 32px;
+  font-size: 16px;
   letter-spacing: -0.03em;
 
   @include tablet {
-    font-size: 16px;
+    font-size: 14px;
     max-width: 100%;
   }
 }
@@ -435,6 +433,7 @@
   transform: translateX(-50%);
   @include tablet {
     padding: 15px 20px;
+    border-radius: 15px;
   }
 }
 
@@ -448,8 +447,7 @@
   align-items: center;
   border-radius: 100px;
   @include tablet {
-    min-width: 60px;
-    height: 60px;
+    display: none;
   }
 }
 #home-pt .pt-item-info .pt-item-info-tag p {
@@ -463,11 +461,18 @@
   padding-left: 20px;
   margin-left: 20px;
   border-left: 1px solid #bbb;
+  @include tablet {
+    padding-left: 0;
+    margin-left: 0;
+    border: none;
+  }
 }
 
 #home-pt .pt-item-info .pt-item-info-text h3 {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: -0.03em;
   @include tablet {
     font-size: 16px;
   }
@@ -533,10 +538,10 @@
 }
 
 #home-testimonial .testimonial-content p {
-  width: 60%;
-  font-size: 14px;
+  width: 65%;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 27px;
+  line-height: 32px;
   letter-spacing: -0.03em;
   @include tablet {
     width: 100%;
@@ -616,10 +621,12 @@
 #home-form .form-input-item input[type="number"] {
   width: 100%;
   padding: 15px;
-  border-radius: 50px;
-  border: 2px solid $light-violet;
+  border-radius: 10px;
+  border: 1px solid $light-violet;
   transition: all ease 0.3s;
   outline: none;
+  font-size: 14px;
+  letter-spacing: -0.03em;
   @include landscape-phone {
     margin: 5px 0;
   }
@@ -627,17 +634,20 @@
 
 #home-form .form-input-item input[type="text"]:focus,
 #home-form .form-input-item input[type="number"]:focus {
-  border: 2px solid $dark-violet;
+  border: 1px solid $dark-violet;
 }
 
 #home-form .form-input-item h3 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
 #home-form .form-input-item h4 {
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
   font-weight: 500;
   @include mobile {
     font-size: 18px;
@@ -655,6 +665,8 @@
 
 #home-form .form-input-item-detail label {
   margin-right: 20px;
+  font-size: 14px;
+  letter-spacing: -0.03em;
 }
 
 #home-form .form-input-item-detail input[type="radio"] {

@@ -51,14 +51,14 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
 }
 
 .button .button-icon img {
   width: 50%;
-  margin-top: 5px;
+  margin-top: 3px;
   transition: all ease 0.3s;
 }
 
@@ -67,10 +67,11 @@ input::-webkit-inner-spin-button {
 }
 
 .button span {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
+  letter-spacing: -0.03em;
   @include tablet {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -206,7 +207,7 @@ br {
         font-size: 12px;
         font-weight: 300;
         line-height: 22px;
-        letter-spacing: -0.36px;
+        letter-spacing: -0.03em;
       }
     }
     &-price {
@@ -241,8 +242,8 @@ br {
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
+  background-color: $white-2;
+  border-bottom: 1px solid #ededed;
 }
 
 #header .mobile-header {
@@ -290,7 +291,9 @@ br {
 }
 
 #header .mobile-header-modal .header-menu .header-menu-item a {
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 #header .mobile-header .mobile-header-button {
@@ -305,7 +308,7 @@ br {
 
 #header .mobile-header .mobile-header-button i {
   color: #f6f6f6;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #header .mobile-header-modal .mobile-header-button {
@@ -337,14 +340,64 @@ br {
 }
 
 #header .header-menu-item a {
-  font-size: 18px;
+  letter-spacing: -0.03em;
+  font-size: 16px;
+  transition: all ease 0.5s;
   @include tablet {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
-#header .header-menu-item:hover a {
+#header .header-menu-item:hover > a {
   color: $dark-violet;
+  @include landscape-phone {
+    color: $white-2;
+  }
+}
+
+#header {
+  .header-menu-item {
+    position: relative;
+    &:hover {
+      .header-menu-item-list {
+        display: block;
+      }
+    }
+    &-list {
+      position: absolute;
+      top: 35px;
+      left: -10px;
+      min-width: 200px;
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.05);
+      background-color: $white-2;
+      display: none;
+      border-radius: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        height: 15px;
+      }
+      .item {
+        &-link {
+          display: block;
+          padding: 12px 10px;
+          transition: all ease 0.5s;
+          font-size: 14px;
+          letter-spacing: -0.03em;
+          border-radius: 10px;
+          &:hover {
+            background-color: $light-violet;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
 }
 
 #header .header-logo a {
@@ -447,7 +500,7 @@ br {
 }
 
 #footer .footer-link .footer-link-list * {
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 0;
   letter-spacing: -0.03em;
   @include tablet {

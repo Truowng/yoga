@@ -53,14 +53,14 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
 }
 
 .button .button-icon img {
   width: 50%;
-  margin-top: 5px;
+  margin-top: 3px;
   transition: all ease 0.3s;
 }
 
@@ -69,12 +69,13 @@ input::-webkit-inner-spin-button {
 }
 
 .button span {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
+  letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 991px) {
   .button span {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -228,7 +229,7 @@ input::-webkit-inner-spin-button {
   font-size: 12px;
   font-weight: 300;
   line-height: 22px;
-  letter-spacing: -0.36px;
+  letter-spacing: -0.03em;
 }
 .courses-item-content-price {
   display: flex;
@@ -264,9 +265,8 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ededed;
 }
 
 #header .mobile-header {
@@ -318,7 +318,9 @@ input::-webkit-inner-spin-button {
 }
 
 #header .mobile-header-modal .header-menu .header-menu-item a {
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 #header .mobile-header .mobile-header-button {
@@ -333,7 +335,7 @@ input::-webkit-inner-spin-button {
 
 #header .mobile-header .mobile-header-button i {
   color: #f6f6f6;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #header .mobile-header-modal .mobile-header-button {
@@ -367,16 +369,61 @@ input::-webkit-inner-spin-button {
 }
 
 #header .header-menu-item a {
-  font-size: 18px;
+  letter-spacing: -0.03em;
+  font-size: 16px;
+  transition: all ease 0.5s;
 }
 @media only screen and (max-width: 991px) {
   #header .header-menu-item a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
-#header .header-menu-item:hover a {
+#header .header-menu-item:hover > a {
   color: #914c97;
+}
+@media only screen and (max-width: 767px) {
+  #header .header-menu-item:hover > a {
+    color: #f6f6f6;
+  }
+}
+
+#header .header-menu-item {
+  position: relative;
+}
+#header .header-menu-item:hover .header-menu-item-list {
+  display: block;
+}
+#header .header-menu-item-list {
+  position: absolute;
+  top: 35px;
+  left: -10px;
+  min-width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  background-color: #f6f6f6;
+  display: none;
+  border-radius: 10px;
+}
+#header .header-menu-item-list::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+#header .header-menu-item-list .item-link {
+  display: block;
+  padding: 12px 10px;
+  transition: all ease 0.5s;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  border-radius: 10px;
+}
+#header .header-menu-item-list .item-link:hover {
+  background-color: #dbbfdd;
+  color: #000;
 }
 
 #header .header-logo a {
@@ -490,7 +537,7 @@ input::-webkit-inner-spin-button {
 }
 
 #footer .footer-link .footer-link-list * {
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 0;
   letter-spacing: -0.03em;
 }
@@ -617,6 +664,7 @@ input::-webkit-inner-spin-button {
   font-weight: 300;
   color: #666666;
   letter-spacing: -0.03em;
+  line-height: 32px;
 }
 @media only screen and (max-width: 991px) {
   #home-banner .banner-content-description {
@@ -685,6 +733,7 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: 400;
+  letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 767px) {
   #home-advantage .advantage-item h3 {
@@ -938,13 +987,13 @@ input::-webkit-inner-spin-button {
   max-width: 80%;
   width: 100%;
   font-weight: 300;
-  line-height: 27px;
-  font-size: 14px;
+  line-height: 32px;
+  font-size: 16px;
   letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 991px) {
   #home-pt .pt-content p {
-    font-size: 16px;
+    font-size: 14px;
     max-width: 100%;
   }
 }
@@ -1012,6 +1061,7 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 991px) {
   #home-pt .pt-item-info {
     padding: 15px 20px;
+    border-radius: 15px;
   }
 }
 
@@ -1027,8 +1077,7 @@ input::-webkit-inner-spin-button {
 }
 @media only screen and (max-width: 991px) {
   #home-pt .pt-item-info .pt-item-info-tag {
-    min-width: 60px;
-    height: 60px;
+    display: none;
   }
 }
 
@@ -1044,10 +1093,19 @@ input::-webkit-inner-spin-button {
   margin-left: 20px;
   border-left: 1px solid #bbb;
 }
+@media only screen and (max-width: 991px) {
+  #home-pt .pt-item-info .pt-item-info-text {
+    padding-left: 0;
+    margin-left: 0;
+    border: none;
+  }
+}
 
 #home-pt .pt-item-info .pt-item-info-text h3 {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 991px) {
   #home-pt .pt-item-info .pt-item-info-text h3 {
@@ -1123,10 +1181,10 @@ input::-webkit-inner-spin-button {
 }
 
 #home-testimonial .testimonial-content p {
-  width: 60%;
-  font-size: 14px;
+  width: 65%;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 27px;
+  line-height: 32px;
   letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 991px) {
@@ -1220,10 +1278,12 @@ input::-webkit-inner-spin-button {
 #home-form .form-input-item input[type=number] {
   width: 100%;
   padding: 15px;
-  border-radius: 50px;
-  border: 2px solid #dbbfdd;
+  border-radius: 10px;
+  border: 1px solid #dbbfdd;
   transition: all ease 0.3s;
   outline: none;
+  font-size: 14px;
+  letter-spacing: -0.03em;
 }
 @media only screen and (max-width: 767px) {
   #home-form .form-input-item input[type=text],
@@ -1234,17 +1294,20 @@ input::-webkit-inner-spin-button {
 
 #home-form .form-input-item input[type=text]:focus,
 #home-form .form-input-item input[type=number]:focus {
-  border: 2px solid #914c97;
+  border: 1px solid #914c97;
 }
 
 #home-form .form-input-item h3 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
 #home-form .form-input-item h4 {
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 @media only screen and (max-width: 575px) {
@@ -1266,6 +1329,8 @@ input::-webkit-inner-spin-button {
 
 #home-form .form-input-item-detail label {
   margin-right: 20px;
+  font-size: 14px;
+  letter-spacing: -0.03em;
 }
 
 #home-form .form-input-item-detail input[type=radio] {
@@ -1531,9 +1596,9 @@ input::-webkit-inner-spin-button {
 }
 #about-courses .courses-list .button span {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 21px;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.03em;
 }
 
 #about-form {
